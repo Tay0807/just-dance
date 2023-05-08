@@ -1,0 +1,224 @@
+:root{
+    --color--preta: black;
+    --color--branco: white;
+    --color--azul: #5196FF;
+    --color--vede: green;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    transition: all 1s;
+    font-style: italic;
+}
+
+
+/* =====================================================================================================
+header
+======================================================================================================== */
+
+
+header #cima, header #baixo, main #produtos #vendas, footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main #produtos #vendas{
+    align-items: center;
+    justify-content: space-around;
+} 
+
+header #cima{
+    margin: 20px;
+    background-color: var(--color--branco);
+}
+
+header #cima nav a, main #como a{
+    color: var(--color--preta);
+}
+
+header #baixo nav a{
+    color: var(--color--branco);
+    text-decoration: none;
+    margin: 10px;
+}
+
+header #baixo nav a:hover, header #cima nav a:hover, main #como a:hover, main #produtos #a:hover, footer nav a:hover{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+header #baixo, footer{
+    background-color: var(--color--preta);
+}
+
+header #baixo img{
+    height: 100px;
+    width: 100px;
+}
+
+/* ===========================================================================================================
+banner
+====================================================================================================== */
+
+main #banner{
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+h1{
+    font-size: 40px;
+    padding: 20px;
+}
+
+main #banner h1, main #banner p{
+    color: var(--color--branco);
+}
+
+main #banner h1, main #banner p, main #como, main #img, main #produtos, footer{
+    text-align: center;
+}
+
+
+main #banner div{
+    padding: 200px;
+    font-size: 30px;
+}
+
+/* =================================================================================
+como
+============================================================================ */
+
+main #como{
+    height: 100%;
+    margin: 30px;
+}
+
+main #como h3, main #img h3{
+    padding: 20px;
+    font-size: 25px;
+}
+
+.p{
+    font-size: 25px;
+}
+
+main #como button{
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    font-weight: bold;
+    margin: 40px;
+}
+main #como button:hover{
+    padding: 20px;
+    background-color: var(--color--vede);
+}
+
+/* ==================================================================================================
+fotos 
+=================================================================================================== */
+main #img img{
+    width: 290px;
+}
+
+main #img #um{
+    padding: 30px;
+}
+
+main #img{
+    background-color: rgba(0, 0, 0, 0.214);
+}
+
+
+.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
+.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
+.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
+
+.slide-show{
+  overflow: hidden;
+}
+
+.slides-list{
+  --selected-item: 0;
+  --total-items: 4;
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+  left: calc(var(--selected-item) * -100%);
+  width: calc(var(--total-items) * 100%);
+  transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+/* ========================================================================================
+vendas
+========================================================================================== */
+
+.img{
+    width: 100px;
+    height: 150px;
+}
+
+.foto{
+    width: fit-content; height: fit-content;
+}
+
+.borda{
+    border: solid 1px black;
+    box-shadow: 2px 2px 2px 2px black;
+    scroll-snap-align: start;
+    scroll-padding-left: 20px
+}
+
+.preco{
+    color: var(--color--vede);
+}
+
+main #produtos h3{
+    margin-top: 30px; margin-bottom: 30px;
+}
+
+main #produtos #a{
+    padding:40px ;
+}
+
+.horizontal-section {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+
+  
+
+/* =========================================================================================
+footer
+========================================================================================= */
+footer{
+    height: 100%;
+    padding: 50px;
+}
+
+footer p, footer nav a{
+    color: var(--color--branco);
+}
+
+
+iframe {
+    max-width: 100% !important;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto !important;
+    margin: 0 auto;
+}

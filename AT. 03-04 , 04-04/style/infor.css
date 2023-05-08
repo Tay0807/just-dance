@@ -1,0 +1,167 @@
+:root{
+    --color--preta: black;
+    --color--branco: white;
+    --color--azul: #5196FF;
+    --color--vede: #54F03B;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    transition: all 2s;
+    font-style: italic;
+}
+
+/* =======================================================================================
+header
+====================================================================================== */
+
+header #cima, header #baixo, footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #cima{
+    margin: 20px;
+    background-color: var(--color--branco);
+}
+
+header #cima nav a, main #como a{
+    color: var(--color--preta);
+}
+
+header #baixo nav a{
+    color: var(--color--branco);
+    text-decoration: none;
+    margin: 10px;
+}
+
+header #baixo nav a:hover, header #cima nav a:hover, footer nav a:hover{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+header #baixo, footer{
+    background-color: var(--color--preta);
+}
+
+header #baixo img{
+    height: 100px;
+    width: 100px;
+}
+
+.cadastrar{
+    background-color: rgba(0, 0, 0, 0.115);
+    padding: 10px;
+}
+
+header #baixo nav a:hover, header #cima nav a:hover{
+    font-weight: bold;
+}
+
+.menu{
+    display: none;
+}
+
+/* ============================================================================
+main
+================================================================================ */
+
+main{
+    background-image: url(../img/backgraund3.jpg);
+    background-repeat: no-repeat; background-position: center center; background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3, main, button{
+    color: white;
+}
+
+main #form{
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+main #form form{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+main #form form input{
+    width:max-content;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.182);
+}
+
+main #form button{
+    background-color: var(--color--vede);
+    margin-bottom: 20px; margin-left: 20px;
+    border: none;
+    padding: 10px;
+}
+
+main #form button:hover{
+    background-color: white;
+}
+
+/* ======================================================================
+borda animada
+====================================================================== */
+
+.borda-animada {
+    margin:auto;
+    border-radius:4px;
+    display: table;
+    font-size:1em;
+    background: -webkit-linear-gradient(left, rgb(121, 220, 229) 50%, transparent 50%), 
+    -webkit-linear-gradient(left, rgb(196, 96, 214) 50%, transparent 50%), 
+    -webkit-linear-gradient(top, rgb(184, 239, 128) 50%, transparent 50%), 
+    -webkit-linear-gradient(top, rgb(223, 94, 94) 50%, transparent 50%);
+  }
+  
+  .borda-animada a {
+  
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration:none;
+    color:black;
+  
+  }
+  
+  .borda-animada {
+  
+    background-size: 12px 2px, 12px 2px, 2px 12px, 2px 12px;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-position: 0 0, left bottom, 0 0, right 0;
+  
+  }
+  
+  .borda-animada:hover {
+  
+    -webkit-animation: anima-borda 10s linear infinite;
+            animation: anima-borda 10s linear infinite;
+  
+  }
+  
+  @-webkit-keyframes anima-borda {
+    0% {
+      background-position: 0 0, left bottom, 0 0, right 0;
+    }
+    100% {
+      background-position: 1000px 0, -1000px bottom, 0 -1000px, right 1000px;
+    }
+  }
+  
+  @keyframes animaborda {
+    0% {
+      background-position: 0 0, left bottom, 0 0, right 0;
+    }
+    100% {
+      background-position: 1000px 0, -1000px bottom, 0 -1000px, right 1000px;
+    }
+  }
+

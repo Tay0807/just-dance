@@ -1,0 +1,22 @@
+@media (max-width: 769px){
+    main #form form div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main #form form, main #form form div {
+        align-items: center;
+    }
+}
+
+@media (max-width: 426px){
+    .navegacao{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+        color: white;
+        margin: 0px 20px;
+    }
+}

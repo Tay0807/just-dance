@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/infor.css">
+    <link rel="stylesheet" href="../mobile/infor.css">
+    <title>Just DAN-ÇE</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" 
+    i   ntegrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <section id="cima">
+            <div>
+                <nav>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                </nav>
+            </div>
+
+            <div>
+                <nav class="cadastrar">
+                    <a href="">Cadastre-se</a>
+                </nav>
+            </div>
+        </section>
+
+        <section id="baixo">
+            <figure>
+                <img src="../img/logo.png" alt="Logo">
+            </figure>
+
+            <nav class="navegacao">
+                <a href="">Produtos</a>
+                <a href="">Programação da semana</a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="menu" href=""><i class="fa-solid fa-bars"></i></a>
+            </nav>
+                <a class="menu" href=""><i class="fa-solid fa-bars"></i></a>
+        </section>
+    </header>
+
+    <main>
+        <div id="form" >
+            <h3>Cadastro usuário</h3>
+            <p>Por favor, preencha todas as informações</p>
+            <div class="borda-animada">
+                <form action="../front/estilos.html">
+                    <label for="Nome">Insira seu nome</label>
+                    <input type="text" id="Nome" required>
+
+                    <label for="Telefone">Telefone</label>
+                    <input type="phone" id="Telefone" required>
+
+                    <label for="Data">Data de nascimento</label>
+                    <input type="text" id="Data" required>
+                    <div>
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" required>
+
+                        <label for="Cidade">Cidade</label>
+                        <input type="text" id="Cidade" required>
+                        
+                        <label for="Estado">Estado</label>
+                        <input type="text" id="Estado" required>
+                    </div>
+
+                    <button type="submit">
+                        Próximo
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/45751c5e31.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            
+            $("#cep").on("change", function(event) { 
+                let valor = $(this).val() 
+
+                if(valor.length === 8) {
+                    const url = `https://viacep.com.br/ws/${valor}/json/`;
+ 
+                    fetch(url)
+                        .then( response => response.json())
+                        .then( json => {
+                                    
+                            if( json.logradouro ) {
+                                $("#Cidade").val(json.localidade)
+                                $("#Estado").val(json.uf)
+                            }
+                            
+                        });
+                }
+            })
+        })
+    </script>     
+</body>
+</html>

@@ -1,0 +1,32 @@
+@media (max-width: 1025px){
+    main div ol{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main{
+        height: fit-content;
+    }
+}
+
+@media (max-width: 426px) {
+    main div ol{
+        grid-template-columns: 1fr;
+    }
+
+    .navegacao{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+        color: white;
+        margin: 0px 20px;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        gap: 17px;
+        text-align: center;
+    }
+}

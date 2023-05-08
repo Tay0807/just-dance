@@ -1,0 +1,181 @@
+:root{
+    --color--preta: black;
+    --color--branco: white;
+    --color--azul: #5196FF;
+    --color--vede: #54F03B;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    transition: all 2s;
+    font-style: italic;
+}
+
+/* =================================================================
+header
+================================================================== */
+
+header #cima, header #baixo, footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #cima{
+    margin: 20px;
+    background-color: var(--color--branco);
+}
+
+header #cima nav a, main #como a{
+    color: var(--color--preta);
+}
+
+header #baixo nav a{
+    color: var(--color--branco);
+    text-decoration: none;
+    margin: 10px;
+}
+
+header #baixo nav a:hover, header #cima nav a:hover, footer nav a:hover{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+header #baixo, footer{
+    background-color: var(--color--preta);
+}
+
+header #baixo img{
+    height: 100px;
+    width: 100px;
+}
+
+.cadastrar{
+    background-color: rgba(0, 0, 0, 0.115);
+    padding: 10px;
+}
+
+header #baixo nav a:hover, header #cima nav a:hover{
+    font-weight: bold;
+}
+
+.menu{
+    display: none;
+}
+
+/* ==================================================================================
+main
+==================================================================================== */
+
+main{
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat; background-position: center center; background-size: cover;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main div ol{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 40px;
+}
+
+main div ol li {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+}
+
+main div, main{
+    color: white; 
+    padding: 20px;
+}
+
+h3{
+    margin-bottom: 100px;
+    font-size: 25px;
+}
+
+/* ========================================================================================
+footer
+========================================================================================== */
+
+footer{
+    height: 100%;
+    padding: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p, footer nav a{
+    color: var(--color--branco);
+}
+
+footer a:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* ==============================================================
+borda aimada
+=============================================================== */
+.borda-animada {
+    margin:auto;
+    border-radius:4px;
+    display: table;
+    font-size:1em;
+    background: -webkit-linear-gradient(left, rgb(255, 255, 255) 50%, transparent 50%), 
+    -webkit-linear-gradient(left, rgb(255, 255, 255) 50%, transparent 50%), 
+    -webkit-linear-gradient(top, rgb(223, 94, 94) 50%, transparent 50%), 
+    -webkit-linear-gradient(top, rgb(223, 94, 94) 50%, transparent 50%);
+  }
+  
+  .borda-animada a {
+  
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration:none;
+    color:black;
+  
+  }
+  
+  .borda-animada {
+  
+    background-size: 12px 2px, 12px 2px, 2px 12px, 2px 12px;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-position: 0 0, left bottom, 0 0, right 0;
+  
+  }
+  
+  .borda-animada:hover {
+  
+    -webkit-animation: anima-borda 10s linear infinite;
+  }
+  
+  @-webkit-keyframes anima-borda {
+    0% {
+      background-position: 0 0, left bottom, 0 0, right 0;
+    }
+    100% {
+      background-position: 1000px 0, -1000px bottom, 0 -1000px, right 1000px;
+    }
+  }
+  
+  @keyframes animaborda {
+    0% {
+      background-position: 0 0, left bottom, 0 0, right 0;
+    }
+    100% {
+      background-position: 1000px 0, -1000px bottom, 0 -1000px, right 1000px;
+    }
+  }
+
+

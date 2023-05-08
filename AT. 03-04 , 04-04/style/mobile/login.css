@@ -1,0 +1,16 @@
+@media (max-width: 426px){
+    .navegacao{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        color: white;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 376px) {
+    main #email div{
+        width: fit-content;
+    }
+}

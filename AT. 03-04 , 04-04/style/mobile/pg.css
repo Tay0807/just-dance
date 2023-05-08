@@ -1,0 +1,21 @@
+@media (max-width: 768px){
+    .borda{
+        width: fit-content; height: fit-content;
+        margin: 0px auto;
+    }
+}
+
+@media (max-width: 426px){
+    footer {
+        flex-direction: column-reverse;
+        gap: 17px;
+    }
+}
+
+@media (max-width: 376px){
+    main #banner div, main #como p{
+        padding: 0px;
+        font-size: 15px;
+    }
+}
+
